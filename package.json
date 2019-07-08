@@ -28,14 +28,17 @@
     "iconv-lite": ">=0.1.0",
     "colors": ">=0.6.0-1",
     "lodash": "^4.17.4",
-    "uglify-js": "^2.8.23"
+    "uglify-js": "^2.8.23",
+    "snyk": "^1.192.3"
   },
   "devDependencies": {
     "mocha": "~1.4.1",
     "should": "~0.6.3"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "licenses": [
     {
@@ -47,5 +50,6 @@
     "type": "git",
     "url": "git://github.com/daxingplay/ModuleCompiler.git"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "snyk": true
 }
